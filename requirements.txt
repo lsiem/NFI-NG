@@ -1,0 +1,4 @@
+textual~=0.58.1
+requests~=2.31.0
+windows-curses~=2.3.2
+schedule~=1.2.1

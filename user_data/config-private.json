@@ -1,0 +1,79 @@
+{
+  "bot_name": "freqtrade",
+  "stake_currency": "USDT",
+  "fiat_display_currency": "USD",
+  "dry_run": false,
+  "cancel_open_orders_on_exit": false,
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": []
+  },
+  "telegram": {
+    "enabled": true,
+    "token": "",
+    "chat_id": "",
+    "reload": true,
+    "keyboard": [
+      [
+        "/daily",
+        "/stats",
+        "/balance",
+        "/profit"
+      ],
+      [
+        "/status table",
+        "/performance"
+      ],
+      [
+        "/reload_config",
+        "/count",
+        "/logs"
+      ]
+    ],
+    "notification_settings": {
+      "status": "silent",
+      "protection_trigger_global": "on",
+      "warning": "on",
+      "startup": "off",
+      "entry": "silent",
+      "entry_fill": "on",
+      "entry_cancel": "on",
+      "exit_cancel": "on",
+      "exit_fill": "on",
+      "exit": {
+        "roi": "silent",
+        "emergency_exit": "silent",
+        "force_exit": "silent",
+        "exit_signal": "silent",
+        "trailing_stop_loss": "silent",
+        "stop_loss": "silent",
+        "stoploss_on_exchange": "silent",
+        "custom_exit": "silent"
+      },
+      "strategy_msg": "silent"
+    },
+    "balance_dust_level": 0.01
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "verbosity": "error",
+    "enable_openapi": false,
+    "jwt_secret_key": "",
+    "CORS_origins": [
+      ""
+    ],
+    "username": "",
+    "password": ""
+  },
+  "initial_state": "running",
+  "force_entry_enable": true,
+  "internals": {
+    "process_throttle_secs": 5
+  }
+}

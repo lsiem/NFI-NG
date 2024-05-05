@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    restart: unless-stopped
+    container_name: freqtrade
+    user: "1000:1000"  # Adjust the UID:GID according to your environment
+    volumes:
+      - "./user_data:/freqtrade/user_data"
+    ports:
+      - "127.0.0.1:8080:8080" # Change to 0.0.0.0:8080 if you want to expose the service to the internet
+    environment:
+      - LOGFILE_PATH=/freqtrade/user_data/logs/freqtrade.log
+      - DB_URL=sqlite:////freqtrade/user_data/tradesv3.sqlite
+    command: >
+      trade
+      --logfile ${LOGFILE_PATH}
+      --db-url ${DB_URL}
+      --config /freqtrade/user_data/config.json
+      --strategy NostalgiaForInfinityX4
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: json-file
+      options:
+        max-size: "200k"
+        max-file: "10"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 1G
+networks:
+  freqtrade_net:
+    driver: bridge
