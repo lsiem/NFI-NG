@@ -80,7 +80,7 @@ NFI-NG is an all-encompassing tool designed to facilitate the establishment of a
 
 > 1. Linux:
 > ```console
-> $ curl -fsSL https://raw.githubusercontent.com/lsiem/NFI-NG/master/setup.sh
+> $ curl -fsSL https://raw.githubusercontent.com/lsiem/NFI-NG/master/setup.sh | sh
 > ```
 >
 > 2. Windows
