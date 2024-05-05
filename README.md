@@ -155,7 +155,7 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+Details about the license can be found here: [LICENSE](https://choosealicense.com/licenses/).
 
 ---
 
