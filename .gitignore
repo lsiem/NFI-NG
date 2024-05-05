@@ -3,3 +3,6 @@ venv
 .aider.chat.history.md
 .aider.input.history
 user_data/logs/
+.idea
+.DS_Store
+
