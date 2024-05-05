@@ -5,4 +5,5 @@ venv
 user_data/logs/
 .idea
 .DS_Store
+*.pyc
 

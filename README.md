@@ -42,6 +42,19 @@ NFI-NG is an all-encompassing tool designed to facilitate the establishment of a
 
 ---
 
+
+## Gallery
+
+<p align="center">
+	<img src="NFI-NG_Screenshot_Installation.png" alt="NFI-NG Screenshot Installation">
+	<img src="NFI-NG_Screenshot_Installation2.png" alt="NFI-NG Screenshot Installation2">
+	<img src="NFI-NG_Screenshot_BotManagement.png" alt="NFI-NG Screenshot BotManagement">
+</p>
+
+<br>
+
+---
+
 ##  Features
 
 | **Feature** | **Description** |
@@ -94,7 +107,6 @@ NFI-NG is an all-encompassing tool designed to facilitate the establishment of a
 - [ ] `► Add more configurable options for installation`
 - [ ] `► Better bot management by providing a WebUI with logs, current configuration, profit and so on...`
 
----
 
 ##  Contributing
 

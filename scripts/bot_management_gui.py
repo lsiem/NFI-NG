@@ -57,7 +57,7 @@ class BotManagementScreen(Screen):
 
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True)
-        yield Footer("NFI-NG by lsiem")
+        yield Footer()
         with Vertical(id="bot_management_form"):
             yield Static("Change your settings here")
             yield Input(placeholder="Binance API Key", id="api_key", classes="input",

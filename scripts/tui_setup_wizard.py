@@ -51,8 +51,8 @@ class TUIApp(App):
 class InstallationScreen(Screen):
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True)
-        yield Footer("NFI-NG by lsiem")
-        with Vertical(id="form") as form:
+        yield Footer()
+        with Vertical(id="form"):
             yield Static("Please enter your Binance API keys as well as your Telegram bot token and chat ID.")
             yield Input(placeholder="Binance API Key", id="api_key", classes="input")
             yield Input(placeholder="Binance API Secret", id="api_secret", classes="input", password=True)
@@ -61,7 +61,6 @@ class InstallationScreen(Screen):
             with Horizontal(id="buttons"):
                 yield Button("Proceed", id="proceed", variant="primary")
                 yield Button("Cancel", id="cancel", variant="error")
-        yield form
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "proceed":
